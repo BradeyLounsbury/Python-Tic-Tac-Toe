@@ -39,56 +39,56 @@ class TestMain(unittest.TestCase):
         board[0][1] = None; board[1][1] = 'X'; board[2][1] = 'O'
         board[0][2] = None; board[1][2] = None; board[2][2] = 'X'
 
-        self.assertTrue(check_winner(board))
+        self.assertEqual(check_winner(board), 'X')
 
         board = new_board()
         board[0][0] = 'X'; board[1][0] = None; board[2][0] = None
         board[0][1] = 'X'; board[1][1] = 'O'; board[2][1] = None
         board[0][2] = 'X'; board[1][2] = None; board[2][2] = 'O'
 
-        self.assertTrue(check_winner(board))
+        self.assertEqual(check_winner(board), 'X')
 
         board = new_board()
         board[0][0] = None; board[1][0] = 'X'; board[2][0] = 'O'
         board[0][1] = None; board[1][1] = 'X'; board[2][1] = None
         board[0][2] = 'O'; board[1][2] = 'X'; board[2][2] = None
 
-        self.assertTrue(check_winner(board))
+        self.assertEqual(check_winner(board), 'X')
 
         board = new_board()
         board[0][0] = 'O'; board[1][0] = None; board[2][0] = 'X'
         board[0][1] = None; board[1][1] = 'O'; board[2][1] = 'X'
         board[0][2] = None; board[1][2] = None; board[2][2] = 'X'
 
-        self.assertTrue(check_winner(board))
+        self.assertEqual(check_winner(board), 'X')
 
         board = new_board()
         board[0][0] = 'X'; board[1][0] = 'X'; board[2][0] = 'X'
         board[0][1] = None; board[1][1] = 'O'; board[2][1] = None
         board[0][2] = None; board[1][2] = None; board[2][2] = 'O'
 
-        self.assertTrue(check_winner(board))
+        self.assertEqual(check_winner(board), 'X')
 
         board = new_board()
         board[0][0] = 'X'; board[1][0] = None; board[2][0] = None
         board[0][1] = 'O'; board[1][1] = 'O'; board[2][1] = 'O'
         board[0][2] = None; board[1][2] = None; board[2][2] = 'X'
 
-        self.assertTrue(check_winner(board))
+        self.assertEqual(check_winner(board), 'O')
 
         board = new_board()
         board[0][0] = 'X'; board[1][0] = None; board[2][0] = None
         board[0][1] = None; board[1][1] = 'X'; board[2][1] = None
         board[0][2] = 'O'; board[1][2] = 'O'; board[2][2] = 'O'
 
-        self.assertTrue(check_winner(board))
+        self.assertEqual(check_winner(board), 'O')
 
         board = new_board()
         board[0][0] = 'X'; board[1][0] = None; board[2][0] = 'O'
         board[0][1] = None; board[1][1] = 'O'; board[2][1] = None
         board[0][2] = 'O'; board[1][2] = None; board[2][2] = 'X'
 
-        self.assertTrue(check_winner(board))
+        self.assertEqual(check_winner(board), 'O')
 
 #to run it as simply "python test_main.py"
 if __name__ == '__main__':
